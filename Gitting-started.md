@@ -4,11 +4,13 @@ Started April 30th 2014
 
 ###1. Set up your personal account
 
-```shell
-git config --global user.name "juliakbaum"   # Sets the default name for git to use when you commit
-git config --global user.email "juliakbaum@gmail.com" # Sets the default email for git to use when you commit
-git config --global core.editor aquamacs            ## Sets the default editor in terminal. Ignore this for now
 See also: https://help.github.com/articles/set-up-git
+
+```shell
+git config --global user.name "juliakbaum"   
+# Sets the default name for git to use when you commit
+git config --global user.email "juliakbaum@gmail.com" 
+# Sets the default email for git to use when you commit
 ```
 
 ###2. Navigating the Github website
