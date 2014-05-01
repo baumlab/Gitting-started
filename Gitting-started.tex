@@ -1,0 +1,30 @@
+GITHUB - #Started April 30th 2014
+#1. PERSONAL ACCOUNT and FIRST TIME CONFIGURATION COMMENTS PER MACHING:
+git config --global user.name "juliakbaum"   # Sets the default name for git to use when you commit
+git config --global user.email "juliakbaum@gmail.com" # Sets the default email for git to use when you commit
+git config --global core.editor aquamacs
+See also: https://help.github.com/articles/set-up-git
+
+#2. BASIC MANEUVERS / NAVIGATING GIT
+-Git icon button in top left - is the MAIN SCREEN Note: Repositories which I am collaborating are only viewable on this screen
+
+-Username/photo icon in upper right shows dashboard for:
+	1) Contributions: 
+	2) Repositories: NOTE that this only shows my repositories **Thus, it shows my forked ‘Cocos_Paper’ repo, but not Easton’s erwhite1/Cocos_Paper repo to which I am contributing (via this fork) - See above to see these. 
+	3) Public activity:
+
+#3. CREATING REPO: 
+See also: https://help.github.com/articles/create-a-repo
+Note that I did this by making a directory on my local machine, then making a repo on github with same name, then linking. In actuality,
+one only has to do one OR the other, and then push the one to the other; 
+git init					#Sets up the necessary Git files
+Initialized empty Git repository in the directory you’ve specified e.g. /Users/you/Hello-World/.git/
+
+#4. Commit a file e.g. README. A commit is essentially a snapshot of all the files in your project at a particular point in time:
+git add README 			#Stages your README file, adding it to the list of files to be committed
+git commit -m ‘comments’	#Commits your files, adding the comments in quotes - 
+Note: At this point it is still in the local repository
+To connect your local repo to your GitHub account, you need to set a remote for your repository and push your commits to it: 
+
+#5. WORKING COLLABORATIVELY with a STUDENT
+# SCENARIO 1 - STUDENT has set up the REPO with their account & it is PRIVATE
