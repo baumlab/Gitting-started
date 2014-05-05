@@ -136,10 +136,12 @@ See also: https://help.github.com/articles/using-pull-requests
 
 There are two main models of collaborating on Github:
 
-1) Fork & Pull
+**1) Fork & Pull**
+
 With this model, one source repo is maintained by one project manager. Anyone can fork off the repo, work on their own personal repo, and submit pull requests to the project manager. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
 
-2) Shared Repository Model
+**2) Shared Repository Model**
+
 This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project. 
 
 It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
