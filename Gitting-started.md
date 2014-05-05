@@ -20,9 +20,9 @@ Note: Repositories which you are collaborating to are only viewable on this scre
 
 Username/photo icon in upper right shows dashboard for:
 
-	1) Contributions: Lists the repositories that you have recently worked in, and your Github activity over the last year
-	2) Repositories: Shows your private and public repositories, and the repos you have forked from other members 
-	3) Public activity: Shows your work on Github - what have you forked, pulled, merged?
+1. Contributions: Lists the repositories that you have recently worked in, and your Github activity over the last year
+2. Repositories: Shows your private and public repositories, and the repos you have forked from other members 
+3. Public activity: Shows your work on Github - what have you forked, pulled, merged?
 
 
 ###3. Join the Baum lab organisation
@@ -42,8 +42,10 @@ FOR TEAMS - we will do this when multiple members want to collaborate on the cod
 
 For our purposes, the easiest way to do this is to create a repo on Github, fork it, and then clone onto your desktop.
 
-	1) Go to github.com/baumlab/teams/teamname
-	2) Click "Add repositories" to create new repo
+1. Go to github.com/baumlab/teams/teamname
+2. Click "Add repositories" to create new repo
+
+Your repo can be private or public - up to you, but make sure that you discuss with everyone in the team before publishing a public repo.
 
 ###5 Fork to your personal account
 
@@ -128,7 +130,18 @@ OR
 
 On baumlab/reponame, you can click pull requests again, look at the *Closed* tab, and you can see all the merged pull requests. This way everyone can track the history of changes to the repo, and nothing gets lost in the edit.
 
- 
+###8 Short note on how we collaborate on Github
 
-###8. WORKING COLLABORATIVELY with a STUDENT
-SCENARIO 1 - STUDENT has set up the REPO with their account & it is PRIVATE
+See also: https://help.github.com/articles/using-pull-requests
+
+There are two main models of collaborating on Github:
+
+1) Fork & Pull
+With this model, one source repo is maintained by one project manager. Anyone can fork off the repo, work on their own personal repo, and submit pull requests to the project manager. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
+
+2) Shared Repository Model
+This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project. 
+
+It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
+
+ 
