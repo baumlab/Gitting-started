@@ -157,14 +157,12 @@ If there are files in a repository that you don't want Git to track (e.g. tempor
 ```shell
 nano .gitignore
 ```
-
 2. In your _.gitignore_ file you can add file names or file types that should not be tracked by Git
 ```
 filename.R
 *.log
 temp-*
 ```
-
 3. If Git is already tracking a particular file, Git __will not__ ignore that file when it is added to your _.gitignore_ file. If you want Git to ignore an already tracked file, you must untrack the file with:
 ```shell
 git rm --cached filename
