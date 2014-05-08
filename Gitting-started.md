@@ -153,17 +153,17 @@ It might be easiest to think of the 2 models in terms of their pull requests. In
 
 If there are files in a repository that you don't want Git to track (e.g. temporary files or sensitive information) you can create a _.gitignore_ file. 
 
-1. While in your local repository create a file called _.gitignore_
+While in your local repository create a file called _.gitignore_
 ```shell
 nano .gitignore
 ```
-2. In your _.gitignore_ file you can add file names or file types that should not be tracked by Git
+In your _.gitignore_ file you can add file names or file types that should not be tracked by Git
 ```
 filename.R
 *.log
 temp-*
 ```
-3. If Git is already tracking a particular file, Git __will not__ ignore that file when it is added to your _.gitignore_ file. If you want Git to ignore an already tracked file, you must untrack the file with:
+If Git is already tracking a particular file, Git __will not__ ignore that file when it is added to your _.gitignore_ file. If you want Git to ignore an already tracked file, you must untrack the file with:
 ```shell
 git rm --cached filename
 ```
