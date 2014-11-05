@@ -6,6 +6,8 @@ Started April 30th 2014
 
 See also: https://help.github.com/articles/set-up-git
 
+We use the scripting language called Bash (in the Terminal application on Mac) to work with git. The following code blocks are similar to what you would see using Bash.
+
 ```shell
 git config --global user.name "myusername"
 # Sets the default name for git to use when you commit
@@ -15,7 +17,11 @@ git config --global user.email "myemailaddress"
 
 ###2. Navigating the Github website
 
+<<<<<<< HEAD
 Clicking the Git icon button in top left (the cat) shows you the main screen.
+=======
+Clicking the Github icon button in top left (the cat) shows you the main screen. 
+>>>>>>> upstream/master
 Note: Repositories which you are collaborating to are only viewable on this screen.
 
 Username/photo icon in upper right shows dashboard for:
@@ -74,7 +80,7 @@ To add files to the repo:
 git add filename
 ```
 
-To commit the changes to the repo:
+To commit the changes to the repo (and include a descriptive message of those changes):
 
 ```shell
 git commit -m "This is my first commit"
@@ -136,10 +142,44 @@ See also: https://help.github.com/articles/using-pull-requests
 
 There are two main models of collaborating on Github:
 
-1) Fork & Pull
+**1) Fork & Pull**
+
 With this model, one source repo is maintained by one project manager. Anyone can fork off the repo, work on their own personal repo, and submit pull requests to the project manager. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
 
+<<<<<<< HEAD
 2) Shared Repository Model
 This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project.
 
 It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
+=======
+**2) Shared Repository Model**
+
+This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project. 
+
+It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
+
+
+###9 Useful Git tips
+
+If there are files in a repository that you don't want Git to track (e.g. temporary files or sensitive information) you can create a _.gitignore_ file. 
+
+While in your local repository create a file called _.gitignore_
+```shell
+nano .gitignore
+```
+In your _.gitignore_ file you can add file names or file types that should not be tracked by Git
+```
+filename.R
+*.log
+temp-*
+```
+If Git is already tracking a particular file, Git __will not__ ignore that file when it is added to your _.gitignore_ file. If you want Git to ignore an already tracked file, you must untrack the file with:
+```shell
+git rm --cached filename
+```
+
+
+
+
+ 
+>>>>>>> upstream/master
