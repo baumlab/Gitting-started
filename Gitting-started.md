@@ -7,34 +7,34 @@ Started April 30th 2014
 See also: https://help.github.com/articles/set-up-git
 
 ```shell
-git config --global user.name "juliakbaum"   
+git config --global user.name "myusername"
 # Sets the default name for git to use when you commit
-git config --global user.email "juliakbaum@gmail.com" 
+git config --global user.email "myemailaddress" 
 # Sets the default email for git to use when you commit
 ```
 
 ###2. Navigating the Github website
 
-Clicking the Git icon button in top left (the cat) shows you the main screen. 
+Clicking the Git icon button in top left (the cat) shows you the main screen.
 Note: Repositories which you are collaborating to are only viewable on this screen.
 
 Username/photo icon in upper right shows dashboard for:
 
 1. Contributions: Lists the repositories that you have recently worked in, and your Github activity over the last year
-2. Repositories: Shows your private and public repositories, and the repos you have forked from other members 
+2. Repositories: Shows your private and public repositories, and the repos you have forked from other members
 3. Public activity: Shows your work on Github - what have you forked, pulled, merged?
 
 
 ###3. Join the Baum lab organisation
 
-To use Github within the Baum lab organisation, contact James or Julia to be added as a member. For any project in the Baum lab, we will create a team that allows multiple users to create and edit repositories. 
+To use Github within the Baum lab organisation, contact James or Julia to be added as a member. For any project in the Baum lab, we will create a team that allows multiple users to create and edit repositories.
 
 **Each team will be for a specific project/manuscript.**
 
 The read/write permissions in an organisation can get confusing, but to keep things simple we will allow all members to read and write (fork, commit and push to the Baum lab project repo). This may result in a barrage of emails from Github going to every project member whenever a pull request is made, but let's see how it goes for now.
 
 
-###4. Create your first repo: 
+###4. Create your first repo:
 
 See also: https://help.github.com/articles/create-a-repo
 
@@ -126,7 +126,7 @@ If your personal repo differs from the Baum lab repo, you will see the file chan
 
 OR
 
-**B)** If you have write priveleges, and you know that no-one has to review the changes, you can merge the pull request yourself. 
+**B)** If you have write priveleges, and you know that no-one has to review the changes, you can merge the pull request yourself.
 
 On baumlab/reponame, you can click pull requests again, look at the *Closed* tab, and you can see all the merged pull requests. This way everyone can track the history of changes to the repo, and nothing gets lost in the edit.
 
@@ -140,8 +140,6 @@ There are two main models of collaborating on Github:
 With this model, one source repo is maintained by one project manager. Anyone can fork off the repo, work on their own personal repo, and submit pull requests to the project manager. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
 
 2) Shared Repository Model
-This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project. 
+This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project.
 
 It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
-
- 
