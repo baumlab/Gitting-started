@@ -9,7 +9,7 @@ See also: https://help.github.com/articles/set-up-git
 ```shell
 git config --global user.name "myusername"
 # Sets the default name for git to use when you commit
-git config --global user.email "myemailaddress" 
+git config --global user.email "myemailaddress"
 # Sets the default email for git to use when you commit
 ```
 
