@@ -72,3 +72,6 @@ We are using two ways to collaborate on Github.
 1. "Fork & Pull" (collaboration between individuals): here, we fork off the account of whoever is leading a project, and changes are made by submitting pull requests. There is no "master" repo.
 
 2. "Shared repository model" (collaboration using a "master" organisation repo): here, each team member forks off a master repository and submits pull requests to update their work. The project leader has read/write permissions for the master repository, and can review the pull requests.
+
+
+Tutorial on 6th November 2014.
