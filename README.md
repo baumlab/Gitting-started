@@ -1,13 +1,15 @@
 Gitting-started
 ===============
 
-####Readme to set up teams, collaborators and repos for the Baum lab.
+####Readme to set up teams, collaborators and repos for the Baum lab (https://baumlab.weebly.com)
 
 *Gitting-started.md contains information on how to use Git within our lab. Feel free to fork and make comments.*
 
 ## Open Notebook Science strategy
 
-We strive to follow Open Science principles by committing fully reproducible science standards. As of July 2016 we are committing to writing manuscripts openly using Github and other collaborative tools, and will be blogging about our experience in switching to Open Notebook Science.
+We strive to follow Open Science principles by committing to reproducible science standards. As of July 2016 we will be writing manuscripts openly using Github and other collaborative tools, and blogging about our experience in switching to Open Notebook Science. 
+
+Some of us have attended Software Carpentry workshops, some of us have never used Git, and none of us are Git experts. We are guinea pigs for switching an entire lab group to an open science protocol, and we welcome any advice, tips and support.
 
 **There are 5 (loose) rules.**
 
@@ -22,7 +24,7 @@ We want to make this transition smooth and painless (ha), and will be using the 
 
 1. **R Studio.** For writing manuscripts and reports in R markdown.
 2. **Sublime Text 3.** For coding: data cleaning, analysis, figures.
-3. **Macdown.** For easy note-taking and github-friendly readme files.
+3. **Macdown.** For easy note-taking and github-friendly markdown readme files.
 
 *Baum lab students - download these tools!*
 
