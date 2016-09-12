@@ -7,9 +7,15 @@ Gitting-started
 
 ## Open Notebook Science strategy
 
-We strive to follow Open Science principles by committing to reproducible science standards. As of July 2016 we will be writing manuscripts openly using Github and other collaborative tools, and blogging about our experience in switching to Open Notebook Science. 
+We strive to follow Open Science principles by committing to reproducible science standards. 
 
-Some of us have attended Software Carpentry workshops, some of us have never used Git, and none of us are Git experts. We are guinea pigs for switching an entire lab group to an open science protocol, and we welcome any advice, tips and support.
+As of July 2016 we will be writing manuscripts openly using Github and other collaborative tools, and blogging about our experience in switching to Open Notebook Science.
+
+Some of us have attended Software Carpentry workshops, some of us have never used Git, and none of us are Git experts. 
+
+We are guinea pigs, switching an entire lab group to an open science protocol. 
+
+We welcome any advice, tips and support.
 
 **There are 5 (loose) rules.**
 
@@ -20,11 +26,15 @@ Some of us have attended Software Carpentry workshops, some of us have never use
 5. Share your ideas and experiences by blogging, tweeting and chatting with your collaborators and fellow graduate students.
 
 
-We want to make this transition smooth and painless (ha), and will be using the following combination of tools to achieve this. 
+## Software and support
+
+We want to make this transition smooth and painless (ha). These tools help:
 
 1. **R Studio.** For writing manuscripts and reports in R markdown.
 2. **Sublime Text 3.** For coding: data cleaning, analysis, figures.
 3. **Macdown.** For easy note-taking and github-friendly markdown readme files.
+4. **Software Carpentry resources.** For teaching inspiration and useful tutorials.
+
 
 *Baum lab students - download these tools!*
 
