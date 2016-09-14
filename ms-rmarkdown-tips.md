@@ -62,5 +62,9 @@ Compile your reference list with:
 write.bibtext(entry=NULL, file='knitcitations.bib', append=FALSE)
 ```
 
+To make your Rmd file automatically update the date that it was knitted, add:
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+in the top YAML section of the document
+
 In general...
 - it doesn't like it when you use setwd() within code chunks (so don't do it!). All file paths within R code chunks are relative to where the .Rmd file is located. So, if you are using our standard file structure and your .Rmd file is in GitProjectName/ms/, then to call in data, you would use ../data/fileyouwant The ../ tells it to look up one directory, and then down into the data directory for your file. 
