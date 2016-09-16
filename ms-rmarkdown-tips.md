@@ -1,7 +1,28 @@
 
 Writing your first R markdown document? This is your first stop for all those fiddly formatting issues.
 
-More general markdown writing tutorials:
+## First steps  
+Make sure that you have done the following in RStudio:  
+`install.packages('knitcitations')  
+install.packages('bibtex')`  
+This bit of code (below) is in the template ms file, but if you are starting from scratch you will need to insert this into the document you want to knit:  
+`library(knitcitations); cleanbib()  
+cite_options(citation_format = "pandoc", check.entries=TRUE)  
+library(bibtex)`  
+
+To find all of the citation styles, fork this directory into your GitHub account:  
+https://github.com/citation-style-language/styles  
+Then, clone it to your computer using `git clone YOUR_URL_HERE` e.g. for me (Danielle) it would be `git clone https://github.com/daniclaar/styles.git`  
+Now, you have all of the citations styles locally on your computer. My strategy has been to find the one that I'd like to use (e.g. Global Change Biology), and then copy that .csl file (e.g. global-change-biology.csl) into your PROJECT_NAME/ms (manuscript) folder. This way it can be directly sourced while knitting the document.  
+  
+## Getting an initial .bib file  
+If you are using Papers, go to File>Export>Bibtex Library  
+![Papers export](Papers_export.jpg)  
+Make sure the settings look like this:  
+![Papers export settings](Papers_export2.png)  
+And export this to your PROJECT_NAME/ms folder, named YOURINITIALS_PapersLibrary_Bibtex.bib  
+  
+## More general markdown writing tutorials:
 
 <http://assemble.io/docs/Cheatsheet-Markdown.html>
 
