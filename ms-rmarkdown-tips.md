@@ -49,16 +49,16 @@ Not sure yet how to number equations.....
 
 ### For Figures, Tables and code chunks
 
-```{r, Arguments}
+`{r, Arguments}
 Code here - if anything is printed/output from this code, it will be put on a separate line 
 You can still comment out lines using a hashtag as usual in R
-```
+`
 
 Arguments:
-eval=FALSE [ignore code chunk - i.e. do not run the code chunk at all]  
-include = FALSE  [run the code chunk, but do not include any of the output in the knitted pdf]
-warning = FALSE [don't print any warnings that R produces while running your code chunk in the knitted pdf]
-echo =  FALSE [don't print the commands from the code chunk into the knitted pdf]
+`eval=FALSE` [ignore code chunk - i.e. do not run the code chunk at all]  
+`include = FALSE`  [run the code chunk, but do not include any of the output in the knitted pdf]
+`warning = FALSE` [don't print any warnings that R produces while running your code chunk in the knitted pdf]
+`echo =  FALSE` [don't print the commands from the code chunk into the knitted pdf]
 
 #### Call R commands in text
 
@@ -67,9 +67,7 @@ echo =  FALSE [don't print the commands from the code chunk into the knitted pdf
 
 ## To call in an image file
 
-```
-![Figure.caption](../filepath.png)
-```
+`![Figure.caption](../filepath.png)`
 
 ### References
 entry = NULL will only read citations that are referred to in the text  
@@ -79,13 +77,12 @@ file = is the new final bib file
 
 Compile your reference list with:
 
-```{r, warning=FALSE, message=FALSE, echo=FALSE}
+`{r, warning=FALSE, message=FALSE, echo=FALSE}
 write.bibtext(entry=NULL, file='knitcitations.bib', append=FALSE)
-```
+`
 
 To make your Rmd file automatically update the date that it was knitted, add:
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-in the top YAML section of the document
+date: "`r format(Sys.time(), '%d %B, %Y')`" in the top YAML section of the document
 
 In general...
 - it doesn't like it when you use setwd() within code chunks (so don't do it!). All file paths within R code chunks are relative to where the .Rmd file is located. So, if you are using our standard file structure and your .Rmd file is in GitProjectName/ms/, then to call in data, you would use ../data/fileyouwant The ../ tells it to look up one directory, and then down into the data directory for your file. 
