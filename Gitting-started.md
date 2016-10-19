@@ -14,6 +14,8 @@ git config --global user.email "myemailaddress"
 # Sets the default email for git to use when you commit
 ```
 
+You might want to tell Git to remember your username and password when you clone new repos. Follow instructions on cashing passwords: <https://help.github.com/articles/caching-your-github-password-in-git/>
+
 ###2. Navigating the Github website
 
 Clicking the Git icon button in top left (the cat) shows you the main screen.
@@ -124,24 +126,9 @@ git merge upstream/master
 
 This will change your local files to match those in the Baum lab repository.
 
-Now, the important part - changing the files in the Baum lab repo. To do this we need to send a pull request: https://help.github.com/articles/using-pull-requests
-
-On github.com, navigate to your username and the forked repo. On the right hand side, click *Pull Request*, then *New pull request*.
-
-If your personal repo differs from the Baum lab repo, you will see the file changes on this page. To request a review of the changes by the Baum lab, click *Create Pull Request*. Now you can:
-
-**A)** Wait for the Team administrator to review edits and decide whether to merge or reject the changes
-
-OR
-
-**B)** If you have write priveleges, and you know that no-one has to review the changes, you can merge the pull request yourself.
-
-On baumlab/reponame, you can click pull requests again, look at the *Closed* tab, and you can see all the merged pull requests. This way everyone can track the history of changes to the repo, and nothing gets lost in the edit.
-
-
 ### 8 Cloning and sharing a repository
 
-To work on a shared repository, you need to start your day with a ```git pull```, to get any new changes from the baumlab repo. As you work, be sure to use ```git add -A``` and ```git commit -m 'commiting something``` to keep your changes recorded. Before you push up to the main repository you will need to pull, add and commit, then push. If git finds a merge conflict, *you* will need to fix it. 
+To work on a shared repository, you need to start your day with a ```git pull```, to get any new changes from the baumlab repo. As you work, be sure to use ```git add -A``` and ```git commit -m 'commiting something'``` to keep your changes recorded. Before you push up to the main repository you will need to pull, add and commit, then push. If git finds a merge conflict, *you* will need to fix it. 
 
 To fix a merge conflict, open up the conflicted file and look for the git language HEAD and lots of >>>>>>>>>>. This is the conflict. Delete the git messages and fix the conflict yourself, then add, commit and push. 
 
@@ -152,8 +139,8 @@ git checkout --theirs filepath/filename
 git checkout --yours filepath/filename
 ```
 
+Then add, commit, push. 
 
-Then add, commit, push. You know the drill.
 
 
 ###9 Short note on how we collaborate on Github
@@ -162,23 +149,44 @@ See also: https://help.github.com/articles/using-pull-requests
 
 There are two main models of collaborating on Github:
 
-1) Fork & Pull
-With this model, one source repo is maintained by one project manager. Anyone can fork off the repo, work on their own personal repo, and submit pull requests to the project manager. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
+1) Forking (i.e. everyone's repo is connected to every other repo)
+With this model, one source repo is maintained by each collaborator. Anyone can fork off the repo, work on their own personal repo, and fetch upstream changes from collaborators. This is most useful when one person is in charge of all the edits, or when a number of people are working independently on different aspects of the project.
 
-2) Shared Repository Model (i.e. cloning)
+2) Shared Repository Model (i.e. everyone clones the same Git repo)
 This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project.
 
-It might be easiest to think of the 2 models in terms of their pull requests. In the Fork & Pull, pull requests are for project managers to review changes to their work; in the shared repository model, pull requests start discussions and code review between all members of a team, before being merged into the master copy.
+###10 Git LFS (large file storage)
 
-JR: NEED TO INVESTIGATE BRANCHES AND GIT MERGE
+Github doesn't like large files. In order to save big Rdata or csv files, we need to enable git lfs. Follow installation instructions here: <https://git-lfs.github.com/>
+
+To set up your machine to enable git lfs in every cloned repo:
+
+```
+git config --global filter.lfs.required true
+git config --global filter.lfs.clean "git-lfs clean %f"
+git config --global filter.lfs.smudge "git-lfs smudge %f"
+```
+
+Or, to manually add git lfs for each repo:
+
+```
+git lfs install
+```
+
+You need to tell git which files to track for LFS. For all Rdata files, use:
+
+```
+git lfs track '*.Rdata'
+```
+
+LFS caused me a few issues when I started. Check here for some tips: <https://shuhrat.github.io/programming/git-lfs-tips-and-tricks.html>
+
+
+##*END OF SECTIONS*
 
 
 
-
-
-
-
-## Notes from GYA git troubleshooting:
+###### Notes from GYA git troubleshooting:
 
 29/07/2016: Ran into problems with JKB writing text and JR writing code on the same document. Ended up with old version of the Rmd and decided to revert to an older commit (using git revert and the SHA for JKB's older commit). Then ended up with detached HEAD after trying to commit and push the correct commit version. Fixed that by creating a temporary branch and committing changes.
 
