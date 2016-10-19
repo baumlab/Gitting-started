@@ -69,7 +69,27 @@ Now you will all be able to push and pull files to the main repository. You will
 See also: https://help.github.com/articles/fork-a-repo
 
 Each member, and you, should go to baumlab/projectname and click *Fork* at the top right of the screen. Now your personal Github account has forked the new repository. The next step is to clone this onto your local machine.
+
 Now your computer will have a local version of the repo files - the master branch. When you make changes on your computer, you will commit and push the changes to your personal github server.
+
+To keep up to date with the forked repository (i.e. the original repo) you'll need to add a 'remote'. This tells git where to find the forked repo:
+
+```shell
+git remote add nickname https://github.com/username/git_repo
+```
+
+For nickname, put the user name or repo name that you want to use to link with the remote. Now, if you write:
+
+```shell
+git remote -v
+```
+
+You can see where git looks for commits. 'origin' is your forked git repo (push local commits there) and 'nickname' is the original repo. Now, to grab changes from the original repo, write
+
+```shell
+git fetch nickname
+git merge nickname
+```
 
 
 ###6 Make commits and push to Github
