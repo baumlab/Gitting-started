@@ -86,3 +86,12 @@ date: "`r format(Sys.time(), '%d %B, %Y')`" in the top YAML section of the docum
 
 In general...
 - it doesn't like it when you use setwd() within code chunks (so don't do it!). All file paths within R code chunks are relative to where the .Rmd file is located. So, if you are using our standard file structure and your .Rmd file is in GitProjectName/ms/, then to call in data, you would use ../data/fileyouwant The ../ tells it to look up one directory, and then down into the data directory for your file. 
+
+## If you are having troubles with knitting with embedded inline R code, try surrounding your code with $  
+e.g. `r fsn.cover` to $`r fsn.cover`$  
+This allows rmarkdown/knitr to interpret any R output which comes out with any scientific notation (exponents, etc.)  
+  
+Related: if your R output is in scientific notation, and you'd rather just have it in plain numbers (e.g. 1e10^4 vs 10000), use format like this: `r format(fsn.cover.N,scientific=FALSE)`
+
+
+
