@@ -120,3 +120,5 @@ e.g. `r fsn.cover` to $`r fsn.cover`$
 This allows rmarkdown/knitr to interpret any R output which comes out with any scientific notation (exponents, etc.)  
   
 Related: if your R output is in scientific notation, and you'd rather just have it in plain numbers (e.g. 1e10^4 vs 10000), use format like this: `r format(fsn.cover.N,scientific=FALSE)`
+
+Remove section numbering from knit document: Just add {-} after the section name, e.g. # appendix A {-}
