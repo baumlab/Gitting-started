@@ -87,6 +87,14 @@ You might want to grab summary statistics or run code for figures within your Rm
 ### To call in an image file
 
 `![Figure.caption](../filepath.png)`
+  
+Note that there's a quirk here - you MUST have a newline before and after your figure for it to label/include the caption.  
+Problem I ran into looks like this:  
+  
+`![Figure.caption](../filepath.png)  
+*Need to change the size of this figure*`  
+  
+...and then I couldn't figure out why it wasn't creating a figure caption. Once I removed `*Need to change the size of this figure*` (or moved it to a new line) then it worked.
 
 ### References
 
