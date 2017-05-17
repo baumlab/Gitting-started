@@ -200,6 +200,13 @@ git lfs track '*.Rdata'
 ```
 
 LFS caused me a few issues when I started. Check here for some tips: <https://shuhrat.github.io/programming/git-lfs-tips-and-tricks.html>
+  
+What do you do if you have accidentally committed a large file multiple times before tracking it with lfs? (DC ran into this problem, found out while trying to push multiple commits)  
+```
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch LARGE_FILENAME_HERE'  
+git lfs track LARGE_FILENAME_HERE  
+```  
+Then add, commit, and push your big file, and it should work!
 
 
 ##*END OF SECTIONS*
