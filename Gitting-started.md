@@ -1,9 +1,9 @@
 
-#Github walkthrough for Baum lab members
+# Github walkthrough for Baum lab members
 Started April 30th 2014
 Updated August 2016 with shared repository guidelines.
 
-###1. Set up your personal account
+### 1. Set up your personal account
 
 See also: https://help.github.com/articles/set-up-git
 
@@ -16,7 +16,7 @@ git config --global user.email "myemailaddress"
 
 You might want to tell Git to remember your username and password when you clone new repos. Follow instructions on cashing passwords: <https://help.github.com/articles/caching-your-github-password-in-git/>
 
-###2. Navigating the Github website
+### 2. Navigating the Github website
 
 Clicking the Git icon button in top left (the cat) shows you the main screen.
 Note: Repositories which you are collaborating to are only viewable on this screen.
@@ -28,7 +28,7 @@ Username/photo icon in upper right shows dashboard for:
 3. Public activity: Shows your work on Github - what have you forked, pulled, merged?
 
 
-###3. Join the Baum lab organisation
+### 3. Join the Baum lab organisation
 
 To use Github within the Baum lab organisation, contact James or Julia to be added as a member. For any project in the Baum lab, we will create a team that allows multiple users to create and edit repositories.
 
@@ -37,7 +37,7 @@ To use Github within the Baum lab organisation, contact James or Julia to be add
 The read/write permissions in an organisation can get confusing, but to keep things simple we will allow all members to read and write (fork, commit and push to the Baum lab project repo). This may result in a barrage of emails from Github going to every project member whenever a pull request is made, but let's see how it goes for now.
 
 
-###4. Create your first repo:
+### 4. Create your first repo:
 
 See also: https://help.github.com/articles/create-a-repo
 
@@ -50,7 +50,7 @@ For our purposes, the easiest way to do this is to create a repo on Github, fork
 
 Your repo can be private or public - up to you, but make sure that you discuss with everyone in the team before publishing a public repo.
 
-###5 Collaborate on a repository
+### 5 Collaborate on a repository
 
 You can either clone a baumlab repository and work directly from the main repo, or you can fork a separate copy of the repository to your personal account. Whichever route you choose, be sure to think about the best collaboration style for your project.
 
@@ -94,7 +94,7 @@ git merge nickname
 ```
 
 
-###6 Make commits and push to Github
+### 6 Make commits and push to Github
 
 Now you work. And make edits. And push to github. This section is just for you - you won't be able to make changes to the team repo yet.
 
@@ -125,7 +125,7 @@ git push origin master
 
 This command sends the commits from **master** to **origin** (from your computer to Github).
 
-###7 Forking continued: sending edits to the Baum lab repo
+### 7 Forking continued: sending edits to the Baum lab repo
 
 See also: https://help.github.com/articles/fork-a-repo
 
@@ -163,7 +163,7 @@ Then add, commit, push.
 
 
 
-###9 Short note on how we collaborate on Github
+### 9 Short note on how we collaborate on Github
 
 See also: https://help.github.com/articles/using-pull-requests
 
@@ -175,7 +175,7 @@ With this model, one source repo is maintained by each collaborator. Anyone can 
 2) Shared Repository Model (i.e. everyone clones the same Git repo)
 This is more commonly used by teams and organisations - everyone has write access to a single shared repository, and the team works more collaboratively on all aspects of the project.
 
-###10 Git LFS (large file storage)
+### 10 Git LFS (large file storage)
 
 Github doesn't like large files. In order to save big Rdata or csv files, we need to enable git lfs. Follow installation instructions here: <https://git-lfs.github.com/>
 
