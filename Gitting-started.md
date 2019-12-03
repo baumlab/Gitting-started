@@ -177,7 +177,7 @@ This is more commonly used by teams and organisations - everyone has write acces
 
 ### 10 Git LFS (large file storage)
 
-Github doesn't like large files. In order to save big Rdata or csv files, we need to enable git lfs. Follow installation instructions here: <https://git-lfs.github.com/>
+Github doesn't like large files. In order to save big Rdata or csv files, we need to enable git lfs. Follow installation instructions here: <https://git-lfs.github.com/> or https://help.github.com/en/github/managing-large-files/installing-git-large-file-storage
 
 To set up your machine to enable git lfs in every cloned repo:
 
