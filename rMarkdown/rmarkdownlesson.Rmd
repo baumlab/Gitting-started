@@ -1,0 +1,167 @@
+---
+title: "Rmarkdown lesson"
+author: "Kristina Tietjen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    css: hidebutton.css
+    toc: true
+    toc_depth: 2
+    toc_float: true
+---
+
+This is a document to learn how to use Rmarkdown. 
+
+So you can write normal text like this and when you knit it will show up like normal text. 
+
+you can also comment out things in the normal text like this <!-- this wont show up when knitted-->
+
+So first I will go over the header which is the top part of this code file.  
+There you will see and edit the title of the document, the author and the date. When creating a markdown file it will just leave it as the standard date but we found a code that will automatically update the date when you knit it so that is really handy. No more forgetting to change the date.  The next part is the default output information. A newly created file will just have output: html_document. What is above is a way to customize the html more. So the css: is to tell it to use the code files to enable the use of the hide/show buttons (described later). toc = table of contents. So true = you want a table of contents, false would mean there wouldn't be one. Depth is how many things will show up in the table. So right now it is at 2 so things with # or ## will show up in the table but not things with ### or more. You can change it to what you want. And then the floating means that in the html it will remain in the same spot on the side as you scroll instead of staying at the top of the page. That option is only available for the html.   
+
+You can knit you document into a word file or pdf but they are more finiky and less customizable so everyone in the lab generally sticks with the html. Although a pdf is easier to share with collaborators who do not use git hub.  
+  
+With the normal text you can do formatting:  
+
+# Level 1 title
+
+*italics*
+
+
+**bold**
+
+If with in the normal text you want to show code you can encase it in two backwards apostrophes:
+`here()` <!-- to show code-->
+
+
+You can also do code in the normal text - so when this is knitted it will show 8 and not the code function. 
+`r sum(3+5)` <!-- to do code outside code chunk-->
+
+
+## level 2 title
+
+
+### level 3 title
+
+
+#### level 4 title
+
+
+## level 2
+
+
+# level 1
+
+I have this sentence but there is not two spaces at the end of this. 
+I have another sentence. 
+
+I have this sentence.  
+I have another sentence two spaces later. 
+
+
+```{r echo=TRUE, warning=FALSE}
+
+sum(3+5)  # sum
+
+
+sum(6+10)
+
+```
+
+
+# I want to do fancy things
+
+Here are some good websites with fancy stuff if you want   
+https://statr.me/2016/08/creating-pretty-documents-with-the-prettydoc-package/  
+
+I will just point out the two things that I use the most often.
+
+## I want to add in a button that will hide/show the output
+
+First you have to have the hidebutton.css and hideOutput.js file in the same folder that you have your rmarkdown file. You can copy and paste them from the Gitting-started repo.    
+
+Then include this at the begining of the file (after the header stuff)  
+<script src="hideOutput.js"></script>  
+
+Then you add   
+<div class="fold o">  
+and  
+</div>  
+around the code chunk that you want to fold into the button
+
+Like so:  
+  
+<div class="fold o">  
+```{r echo=FALSE, warning=FALSE}
+
+sum(3+5)  # sum
+
+
+sum(6+10)
+
+```
+</div>    
+
+
+## You can also create tabs
+this is great for condensing alot of things and it is really easy to implement.  You simply put `{.tabset}` at the end of the title and then the next level down titles will be put into tabs.  
+Like so:  
+
+### This will be the top title {.tabset}
+
+#### 2x2
+```{r echo=TRUE, warning=FALSE}
+2*2
+
+```
+
+#### 2x3
+
+```{r echo=TRUE, warning=FALSE}
+2*3
+
+```
+
+#### 2x4
+```{r echo=TRUE, warning=FALSE}
+2*4
+
+```
+
+#### 2x5
+```{r echo=TRUE, warning=FALSE}
+2*5
+
+```
+
+
+#### 2x6
+```{r echo=TRUE, warning=FALSE}
+2*6
+
+```
+
+### Going back to the same level of the title will end the tabing
+
+# you can also name your code chunks  
+
+Like so:  
+
+```{r I named this code chunk}
+
+#this code chunk is named
+
+```
+
+It wont show up when knitted but if there is an error it will give the name of the code chunk (it also gives the line number of the first line of the code chunk that the error is in so its not that different). But it can help you find the chunk you need when things are collapsed.  
+
+# you can do figure captions in the the code chunks and set figure sizes etc. 
+
+```{r echo=FALSE, fig.cap="Figure 1. Length of petals by species", fig.height=2, fig.width=4}
+data(iris)
+library(ggplot2)
+
+ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_bar(stat = "identity", position = "dodge")
+
+
+```
