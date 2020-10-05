@@ -171,6 +171,8 @@ ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_bar(stat = "identity", p
 
 Another fun and useful thing to do it to create interactive plots using the package `plotly`.  You can integrate it with ggplot2 code as well.  
 
+Check out this webpage https://plotly.com/r/ for more information and ways to make your figure interactive. It can get real fancy haha!  
+
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(plotly)
 
