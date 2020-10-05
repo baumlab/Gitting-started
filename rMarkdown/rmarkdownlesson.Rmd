@@ -8,6 +8,7 @@ output:
     toc: true
     toc_depth: 2
     toc_float: true
+    code_folding: "hide"
 ---
 
 This is a document to learn how to use Rmarkdown. 
@@ -17,7 +18,7 @@ So you can write normal text like this and when you knit it will show up like no
 you can also comment out things in the normal text like this <!-- this wont show up when knitted-->
 
 So first I will go over the header which is the top part of this code file.  
-There you will see and edit the title of the document, the author and the date. When creating a markdown file it will just leave it as the standard date but we found a code that will automatically update the date when you knit it so that is really handy. No more forgetting to change the date.  The next part is the default output information. A newly created file will just have output: html_document. What is above is a way to customize the html more. So the css: is to tell it to use the code files to enable the use of the hide/show buttons (described later). toc = table of contents. So true = you want a table of contents, false would mean there wouldn't be one. Depth is how many things will show up in the table. So right now it is at 2 so things with # or ## will show up in the table but not things with ### or more. You can change it to what you want. And then the floating means that in the html it will remain in the same spot on the side as you scroll instead of staying at the top of the page. That option is only available for the html.   
+There you will see and edit the title of the document, the author and the date. When creating a markdown file it will just leave it as the standard date but we found a code that will automatically update the date when you knit it so that is really handy. No more forgetting to change the date.  The next part is the default output information. A newly created file will just have output: html_document. What is above is a way to customize the html more. So the css: is to tell it to use the code files to enable the use of the hide/show buttons (described later). toc = table of contents. So true = you want a table of contents, false would mean there wouldn't be one. Depth is how many things will show up in the table. So right now it is at 2 so things with # or ## will show up in the table but not things with ### or more. You can change it to what you want. And then the floating means that in the html it will remain in the same spot on the side as you scroll instead of staying at the top of the page. That option is only available for the html.  The code folding means that if you chose to print your code (instead of just the output) then it will be hidden and a button will show up to that you can click on to reveal the code.   
 
 You can knit you document into a word file or pdf but they are more finiky and less customizable so everyone in the lab generally sticks with the html. Although a pdf is easier to share with collaborators who do not use git hub.  
   
@@ -165,3 +166,20 @@ ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_bar(stat = "identity", p
 
 
 ```
+
+# Interactive plots
+
+Another fun and useful thing to do it to create interactive plots using the package `plotly`.  You can integrate it with ggplot2 code as well.  
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(plotly)
+
+p <- plot_ly(iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species, type = "scatter")
+
+p
+
+```
+
+
+
+
