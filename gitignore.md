@@ -17,7 +17,7 @@ In terminal in your git repo enter `touch .gitignore`
 Then open that .gitignore file `open .gitignore`
 This opens the text file where you will add what you want to ignore. This website has a suggestion list: https://gist.github.com/octocat/9257657
 
-For some projects we have ignored .Rhistory as well
+**For some projects we have ignored .Rhistory as well**
 
 Once adding what files to ignore save the text file then add it (make sure to just add that file and not the files you are trying to ignore) `git add .gitignore`
 Commit and then push it.  You should be good to go.  You can do a `git status` to make sure it is no longer tracking the files you told it to ignore.
