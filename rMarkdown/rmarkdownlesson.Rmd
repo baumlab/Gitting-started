@@ -2,13 +2,13 @@
 title: "Rmarkdown lesson"
 author: "Kristina Tietjen"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   html_document:
     css: hidebutton.css
-    toc: true
+    toc: yes
     toc_depth: 2
-    toc_float: true
-    code_folding: "hide"
+    toc_float: yes
+    code_folding: hide
 ---
 
 This is a document to learn how to use Rmarkdown. 
@@ -61,7 +61,7 @@ I have another sentence two spaces later.
 
 
 ```{r echo=TRUE, warning=FALSE}
-
+# Now I am typing some text not code
 sum(3+5)  # sum
 
 
@@ -183,5 +183,16 @@ p
 ```
 
 
+# Interactive tables
 
+You can also do interactive tables using the package `DT`. Using this will page your tables but you can change how many are shown on a page. Also you can sort by columns and search within the table.  
+
+```{r echo=FALSE}
+library(DT)
+
+
+DT::datatable(iris)
+
+
+```
 

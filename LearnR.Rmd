@@ -1,0 +1,74 @@
+---
+title: "Learn R"
+author: "Kristina Tietjen"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    css: hidebutton.css
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    code_folding: "hide"
+---
+<script src="hideOutput.js"></script>  
+
+
+###Lesson plan::
+
+* Basics of R  
+* Good practices
+* Basics of Rstudio  
+* Cheatsheets  
+* Stackoverflow and other help pages  
+* Packages  
+  * here  
+  * dplyr  
+  * plyr  
+  * reshape2  
+  * stringr  
+  * tidyr  
+  * ggplot2  
+  * RColorBrewer  
+  * wesanderson   
+  * beyonce  
+  * magick  
+* Rmarkdown  
+* Stats  
+  * lme4 
+  * arm 
+  
+# Basics of R  
+
+# Good practices
+
+Have good organization in folders and with in code files  
+
+Comment out things (make it seem like you are over commenting)  
+
+Save often  
+
+# Basics of Rstudio
+
+Layout  
+
+File
+
+# Cheatsheets
+
+There are a bunch of pdf cheatsheets available to download here: https://rstudio.com/resources/cheatsheets/  
+These are great as quick references.   
+There are also printed and laminated versions of a handful of them in the lab.  
+
+Also there is a cheatsheet for colors - https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf  
+It has the names for base colors and also examples of color scales in different packages etc. 
+
+# Stackoverflow and other help pages
+
+# Packages
+
+## here
+
+## RColorBrewer
+
+There is a website where you can search for colors and scales - https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3  and even put in you want colorblind friendly colors etc. 
+  
