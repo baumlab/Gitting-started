@@ -12,8 +12,6 @@ output:
 ---
 <script src="hideOutput.js"></script>  
 
-adding as example
-
 ###Lesson plan::
 
 * Basics of R  
